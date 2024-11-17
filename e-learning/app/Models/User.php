@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
+use Illuminate\Database\Eloquent\Casts\Attribute;
+
 class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
@@ -44,5 +46,21 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+
+    //vuelve el nombre ingresado a minisculas
+    protected function name():Attribute{
+        return new Attribute(
+            //Accesor
+            get:function($value){
+                return ucwords($value);
+            },
+
+            //modificador
+            set:function($value){
+                return strtolower($value);
+            }
+        );
     }
 }
