@@ -9,9 +9,9 @@ Route::get('/', HomeController::class);
 
 Route::controller(CursoController::class)->group(function (){
     // ruta : peticion( url, metodo)
-    Route::get('cursos', 'index');
-    Route::get('cursos/create', 'create');
-    Route::get('cursos/{curso}', 'show'); 
+    Route::get('cursos', 'index')->name('cursos.index');
+    Route::get('cursos/create', 'create')->name('cursos.create');
+    Route::get('cursos/{curso}', 'show')->name('cursos.show'); 
 });
 
 
