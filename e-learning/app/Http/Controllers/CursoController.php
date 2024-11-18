@@ -28,7 +28,7 @@ class CursoController extends Controller
 
         $curso->save();
 
-        return ;
+        return redirect()->route('cursos.show', $curso->name);
     }
 
     public function show($name){
