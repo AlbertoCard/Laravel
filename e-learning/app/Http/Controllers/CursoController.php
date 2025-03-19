@@ -29,7 +29,7 @@ class CursoController extends Controller
     $curso->save();
 
     // Redirigir usando el ID
-    return redirect()->route('cursos.show', $curso->id);
+    return redirect()->route('cursos.show', $curso->name);
 }
 
     public function show($name){
