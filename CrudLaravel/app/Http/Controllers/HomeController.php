@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function users(){
-        return view('userlist');
+        return view('userslist');
     }
 }
 

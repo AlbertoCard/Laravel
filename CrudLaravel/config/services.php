@@ -36,14 +36,14 @@ return [
     ],
 
     'firebase' => [
-    'api_key' => 'api_key',
-    'auth_domain' => 'auth_domain',
-    'database_url' => 'database_url',
-    'project_id' => 'project_id',
-    'storage_bucket' => 'storage_bucket',
-    'messaging_sender_id' => 'messaging_sender_id',
-    'app_id' => 'app_id',
-    'measurement_id' => 'measurement_id',
+        'api_key' => env('FIREBASE_API_KEY'),
+        'auth_domain' => env('FIREBASE_AUTH_DOMAIN'),
+        'database_url' => env('FIREBASE_DATABASE_URL'), 
+        'project_id' => env('FIREBASE_PROJECT_ID'),
+        'storage_bucket' => env('FIREBASE_STORAGE_BUCKET'),
+        'messaging_sender_id' => env('FIREBASE_MESSAGING_SENDER_ID'),
+        'app_id' => env('FIREBASE_APP_ID'),
+        'measurement_id' => env('FIREBASE_MEASUREMENT_ID'),
     ],
 
 ];
