@@ -18,8 +18,16 @@ class CursoController extends Controller
         return view('cursos.create');
     }
 
-    public function store(Request $request)
-{
+    public function store(Request $request){
+
+    //Validacion de datos
+    request()->validate([
+        'name' => 'required',
+        'description' => 'required',
+        'categoria' => 'required'
+    ]);
+
+
     $curso = new Curso();
 
     $curso->name = $request->name;
