@@ -35,4 +35,15 @@ return [
         ],
     ],
 
+    'firebase' => [
+    'api_key' => 'api_key',
+    'auth_domain' => 'auth_domain',
+    'database_url' => 'database_url',
+    'project_id' => 'project_id',
+    'storage_bucket' => 'storage_bucket',
+    'messaging_sender_id' => 'messaging_sender_id',
+    'app_id' => 'app_id',
+    'measurement_id' => 'measurement_id',
+    ],
+
 ];
