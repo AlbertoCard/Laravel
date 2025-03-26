@@ -10,6 +10,7 @@
             </div>
         </div>
     </div>
+    <button onclick="window.location='{{ route('logout') }}'">Logout</button>
 </main>
 @endsection
                                 
